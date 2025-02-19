@@ -2,6 +2,15 @@
   "name": "copilot",
   "version": "0.1.0",
   "private": true,
+  "description": "testing and creating a working environment using the npx create-react-app command with further configuration and work in it to create a landing page for a project",
+  "homepage": "",
+  "author": "Ulich Igor",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "lint": "eslint src/**/*.{js,jsx,ts,tsx}"
+  },
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
@@ -10,13 +19,9 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "web-vitals": "^2.1.4",
+    "sass": "^1.32.0",
+    "sass-loader": "^10.1.1"
   },
   "eslintConfig": {
     "extends": [
