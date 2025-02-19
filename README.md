@@ -15,6 +15,13 @@
 
 3. **Настройте поддержку SASS:**
    - Создайте файл `src/scss/styles.module.scss` и добавьте в него стили.
+     ```scss
+     @use './scss/_var' as vars;
+
+     .example {
+       color: vars.$primary-color;
+     }
+     ```
    - Импортируйте `styles.module.scss` в `src/App.js`:
      ```jsx
      import styles from './scss/styles.module.scss';
