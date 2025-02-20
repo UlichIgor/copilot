@@ -51,15 +51,21 @@
 
 5. **Настройте поддержку JSX:**
    - Убедитесь, что файлы с расширением `.jsx` обрабатываются Babel. Для этого добавьте следующие настройки в файл `.babelrc`:
-     ```js
-    {
-  "presets": ["@babel/preset-env"]
-    };
+     ```json
+     {
+       "presets": ["@babel/preset-env", "@babel/preset-react"]
+     }
      ```
 
 Теперь ваша рабочая среда настроена для работы с React, SASS и проверкой на ошибки.
-якщо виникають помилки закидуете в чат 
-src\index.jsx
-  Line 3:17:  Unable to resolve path to module './App'  import/no-unresolved;
-  прописуете поясненя івирішуете проблему
+
+Если возникают ошибки, например:
+```
+src/index.jsx
+  Line 3:17:  Unable to resolve path to module './App'  import/no-unresolved
+```
+пропишите пояснения и решите проблему, например, добавив расширение файла при импорте:
+```jsx
+import App from './App.jsx';
+```
 

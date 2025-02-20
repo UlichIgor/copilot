@@ -5,11 +5,12 @@
   "description": "testing and creating a working environment using the npx create-react-app command with further configuration and work in it to create a landing page for a project",
   "homepage": "https://github.com/UlichIgor/copilot",
   "author": "Ulich Igor",
-  "main": "index.js",
+  "main": "index.jsx",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "lint": "eslint src/**/*.{js,jsx,ts,tsx}"
+    "lint": "eslint src/**/*.{js,jsx,ts,tsx}",
+    "build:webpack": "webpack --mode production"
   },
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
@@ -19,8 +20,8 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-scripts": "5.0.1",
+    "resolve-url-loader": "^5.0.0",
     "sass": "^1.32.0",
-    "sass-loader": "^10.1.1",
     "web-vitals": "^2.1.4"
   },
   "eslintConfig": {
@@ -42,10 +43,21 @@
     ]
   },
   "devDependencies": {
+    "@babel/core": "^7.16.5",
+    "@babel/preset-env": "^7.16.5",
+    "@babel/preset-react": "^7.16.5",
+    "babel-loader": "^8.2.3",
+    "css-loader": "^6.5.1",
     "eslint": "^8.57.1",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react": "^7.37.4",
-    "eslint-plugin-react-hooks": "^5.1.0"
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "html-webpack-plugin": "^5.5.0",
+    "sass-loader": "^16.0.5",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.64.4",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.7.1"
   }
 }
