@@ -22,7 +22,7 @@
        color: vars.$primary-color;
      }
      ```
-   - Импортируйте `styles.module.scss` в `src/App.js`:
+   - Импортируйте `styles.module.scss` в `src/App.jsx`:
      ```jsx
      import styles from './scss/styles.module.scss';
      ```
@@ -57,7 +57,56 @@
      }
      ```
 
-Теперь ваша рабочая среда настроена для работы с React, SASS и проверкой на ошибки.
+6. **Настройте Webpack:**
+   - Установите необходимые зависимости для Webpack:
+     ```sh
+     npm install webpack webpack-cli webpack-dev-server --save-dev
+     npm install babel-loader css-loader style-loader sass-loader --save-dev
+     ```
+   - Создайте файл `webpack/config.js` и добавьте следующие настройки:
+     ```js
+     const path = require('path');
+
+     module.exports = {
+       entry: './src/index.jsx',
+       output: {
+         path: path.resolve(__dirname, 'dist'),
+         filename: 'bundle.js'
+       },
+       module: {
+         rules: [
+           {
+             test: /\.jsx?$/,
+             exclude: /node_modules/,
+             use: {
+               loader: 'babel-loader'
+             }
+           },
+           {
+             test: /\.scss$/,
+             use: ['style-loader', 'css-loader', 'sass-loader']
+           }
+         ]
+       },
+       resolve: {
+         extensions: ['.js', '.jsx']
+       },
+       devServer: {
+         contentBase: path.join(__dirname, 'dist'),
+         compress: true,
+         port: 9000
+       }
+     };
+     ```
+   - Добавьте скрипты для запуска Webpack в `package.json`:
+     ```json
+     "scripts": {
+       "start": "webpack serve --config webpack/config.js --mode development",
+       "build": "webpack --config webpack/config.js --mode production"
+     }
+     ```
+
+Теперь ваша рабочая среда настроена для работы с React, SASS, проверкой на ошибки и сборкой с помощью Webpack.
 
 Если возникают ошибки, например:
 ```
