@@ -40,22 +40,22 @@
      ```
    - Создайте файл `.eslintrc.json` в корне проекта и добавьте следующие настройки:
      ```json
-    {
-  "extends": [
-    "react-app",
-    "plugin:react/recommended",
-    "plugin:jsx-a11y/recommended",
-    "plugin:import/errors",
-    "plugin:import/warnings"
-  ],
-  "plugins": ["react", "jsx-a11y", "import"],
-  "rules": {
-    "no-unused-vars": [
-      "error",
-      { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }
-    ]
-  }
-}
+     {
+       "extends": [
+         "react-app",
+         "plugin:react/recommended",
+         "plugin:jsx-a11y/recommended",
+         "plugin:import/errors",
+         "plugin:import/warnings"
+       ],
+       "plugins": ["react", "jsx-a11y", "import"],
+       "rules": {
+         "no-unused-vars": [
+           "error",
+           { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }
+         ]
+       }
+     }
      ```
 
 5. **Настройте поддержку JSX:**
@@ -114,10 +114,10 @@
    - Добавьте скрипты для запуска Webpack в `package.json`:
      ```json
      "scripts": {
-     "start": "react-scripts start",
-     "build": "react-scripts build",
-     "lint": "eslint src/**/*.{js,jsx,ts,tsx}",
-     "build:webpack": "webpack --mode production"
+       "start": "react-scripts start",
+       "build": "react-scripts build",
+       "lint": "eslint src/**/*.{js,jsx,ts,tsx}",
+       "build:webpack": "webpack --mode production"
      }
      ```
 
