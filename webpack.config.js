@@ -1,9 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { node } = require('webpack');
-const webpack = require('webpack');
-const WebpackDevServer = require('webpack-dev-server');
 const isProduction = process.env.NODE_ENV === 'production'
+
 module.exports = {
   mode: isProduction ? 'production' : 'development',
   devtool: 'source-map', // включає source-map для sass-loader
@@ -57,7 +55,7 @@ module.exports = {
     }),
   ],
   devServer: {
-    setupMiddlewares: (middlewares, devServer) => {
+    setupMiddlewares: (middlewares) => {
       // Ваші middleware функції
       middlewares.push(
         // Приклад middleware
