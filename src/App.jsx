@@ -1,4 +1,5 @@
-import styles from'./scss/styles.module.scss';
+import React from 'react';
+import styles from './scss/styles.module.scss';
 
 function App() {
   return (

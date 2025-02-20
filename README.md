@@ -58,3 +58,8 @@
      ```
 
 Теперь ваша рабочая среда настроена для работы с React, SASS и проверкой на ошибки.
+якщо виникають помилки закидуете в чат 
+src\index.jsx
+  Line 3:17:  Unable to resolve path to module './App'  import/no-unresolved;
+  прописуете поясненя івирішуете проблему
+
