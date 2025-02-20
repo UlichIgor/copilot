@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "description": "testing and creating a working environment using the npx create-react-app command with further configuration and work in it to create a landing page for a project",
-  "homepage": "",
+  "homepage": "https://github.com/UlichIgor/copilot",
   "author": "Ulich Igor",
   "main": "index.js",
   "scripts": {
