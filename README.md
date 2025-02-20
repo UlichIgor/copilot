@@ -39,7 +39,7 @@
      npm install eslint eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-jsx-a11y eslint-plugin-import --save-dev
      ```
    - Создайте файл `.eslintrc.json` в корне проекта и добавьте следующие настройки:
-     ```json
+     ```
      {
   "extends": [
     "react-app",
