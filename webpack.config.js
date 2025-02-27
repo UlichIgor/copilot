@@ -23,7 +23,7 @@ module.exports = {
         },
       },
       {
-        test: /\.scss$/,
+        test: /\.s[ac]ss$/i,
         use: [
           'style-loader',
           {
@@ -38,10 +38,15 @@ module.exports = {
             loader: 'resolve-url-loader',
             options: { sourceMap: true }
           },
-          {
-            loader: 'sass-loader',
-            options: { sourceMap: true }
-          }
+           {
+            loader: "sass-loader",
+            options: {
+              api: "modern-compiler",
+              sassOptions: {
+                options: { sourceMap: true }
+              },
+            },
+          },
         ]
       },
     ],
