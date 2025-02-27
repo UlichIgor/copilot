@@ -31,14 +31,6 @@ module.exports = {
             options: { sourceMap: true }
           },
           {
-            loader: 'postcss-loader',
-            options: { sourceMap: true }
-          },
-          {
-            loader: 'resolve-url-loader',
-            options: { sourceMap: true }
-          },
-           {
             loader: "sass-loader",
             options: {
               api: "modern-compiler",
@@ -73,5 +65,5 @@ module.exports = {
       return middlewares;
     }
   }
-  
+
 };
