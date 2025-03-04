@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const isProduction = process.env.NODE_ENV === 'production'
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   mode: isProduction ? 'production' : 'development',
@@ -25,21 +26,13 @@ module.exports = {
       {
         test: /\.s[ac]ss$/i,
         use: [
-          'style-loader',
-          {
-            loader: 'css-loader',
-            options: { sourceMap: true }
-          },
-          {
-            loader: "sass-loader",
-            options: {
-              api: "modern-compiler",
-              sassOptions: {
-                options: { sourceMap: true }
-              },
-            },
-          },
-        ]
+          // fallback to style-loader in development
+          process.env.NODE_ENV !== "production"
+            ? "style-loader"
+            : MiniCssExtractPlugin.loader,
+          "css-loader",
+          "sass-loader",
+        ],
       },
     ],
   },
@@ -49,6 +42,12 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html',
+    }),
+    new MiniCssExtractPlugin({
+      // Параметри, подібні до тих самих параметрів у webpackOptions.output
+      // обидва параметри необов'язкові
+      filename: "[name].css",
+      chunkFilename: "[id].css",
     }),
   ],
   devServer: {
