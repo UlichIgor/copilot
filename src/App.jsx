@@ -1,11 +1,11 @@
 import React from 'react';
-import styles from './scss/styles.module.scss';
-
+import './scss/styles.module.scss';
+import Header from './components/Header/Header.jsx';
 function App() {
   return (
-    <div className={styles.App}>
-     testings create-react-app
-    </div>
+    <>
+      <Header/>
+    </>
   );
 }
 

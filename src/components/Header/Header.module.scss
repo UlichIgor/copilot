@@ -1,0 +1,15 @@
+@use'../../scss/var'as vars;
+.header{
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 280px;
+  background-color:vars.$bg-color;
+  color:vars.$color;
+  text-align: center;
+  h1{
+    font-style: italic;
+    font-family: vars.$font-family;
+    font-size: vars.$font-size;
+  }
+}
