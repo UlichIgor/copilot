@@ -1,0 +1,16 @@
+@use'../../scss/var' as vars;
+
+.footer {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+
+  h3 {
+    font-style: italic;
+    font-family: vars.$font-family;
+    font-size: vars.$font-size;
+    text-align: center;
+  }
+}
