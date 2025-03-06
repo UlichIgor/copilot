@@ -2,7 +2,11 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const isProduction = process.env.NODE_ENV === 'production'
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const sass = require('sass');
 
+const result = sass.renderSync({
+  silenceDeprecations: ['legacy-js-api'],
+});
 module.exports = {
   mode: isProduction ? 'production' : 'development',
   devtool: 'source-map', // включає source-map для sass-loader
