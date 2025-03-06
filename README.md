@@ -74,7 +74,7 @@
      npm install webpack webpack-cli webpack-dev-server --save-dev
      npm install babel-loader css-loader style-loader sass-loader --save-dev
      ```
-   - Создайте файл `webpack/config.js` и добавьте следующие настройки:
+   - Создайте файл `webpack.config.js` в корне проекта и добавьте следующие настройки:
 
      ```js
      const path = require("path");
