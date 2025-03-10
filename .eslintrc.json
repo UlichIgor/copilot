@@ -17,6 +17,7 @@
         "ignoreRestSiblings": false,
         "reportUsedIgnorePattern": false
       }
-    ]
+    ],
+     "@typescript-eslint/no-var-requires": "error"
   }
 }
